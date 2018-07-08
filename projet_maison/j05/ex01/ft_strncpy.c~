@@ -1,0 +1,41 @@
+
+#include <stdio.h>
+#include <string.h>
+
+char    *ft_strncpy(char *dest, char *src, unsigned int n)
+{
+	int i;
+
+        i = 0;
+        while (i < (n - 1) && src[i] != '\0')
+	{
+                if (src[i])
+                {
+                        dest[i] = src[i];
+                        i++;
+                }
+		else if (src[i] == '\0')
+		{
+			dest[i] = '\0';
+			i++;
+	        }
+        }
+        dest[i] = src[i];
+        return (dest);
+}
+
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+  /*char src[] = "Bo";
+  char dest[] = "ruojnoB";
+  unsigned int n;*/
+  int n;
+
+  n = 3;
+  if (argc != 4)
+    return (0);
+  printf("%s\n%s\n", ft_strncpy(argv[1], argv[2], atoi(argv[3])), strncpy(argv[1], argv[2], atoi(argv[3])));
+  return (0);
+}
