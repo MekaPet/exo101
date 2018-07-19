@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_str_is_lowercase.c                            .::    .:/ .      .::   */
+/*   ft_str_is_numeric.c                              .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bjuarez <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/07/09 22:20:34 by bjuarez      #+#   ##    ##    #+#       */
-/*   Updated: 2018/07/10 19:51:02 by bjuarez     ###    #+. /#+    ###.fr     */
+/*   Created: 2018/07/09 22:17:30 by bjuarez      #+#   ##    ##    #+#       */
+/*   Updated: 2018/07/10 20:04:06 by bjuarez     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int i;
 
 	i = 0;
 	if (str[0] == '\0')
-		return (1)
+		return (1);
 	while (str[i])
 	{
-		if ((str[i] < 97 && str[i] > 122))
+		if (str[i] < 48 && str[i] > 57)
 			return (0);
 		else
 			i++;
